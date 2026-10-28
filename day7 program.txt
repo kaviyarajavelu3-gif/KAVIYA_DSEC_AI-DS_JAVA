@@ -55,3 +55,108 @@ public class Main {
 }
 
 4)
+
+import java.util.Scanner;
+
+public class Main {
+
+    static void mergesort(int a[], int left, int right) {
+        if (left < right) {
+            int mid = (left + right) / 2;
+
+            mergesort(a, left, mid);
+            mergesort(a, mid + 1, right);
+
+            merge(a, left, mid, right);
+        }
+    }
+
+    static void merge(int a[], int left, int mid, int right) {
+        int temp[] = new int[right - left + 1];
+
+        int i = left;
+        int j = mid + 1;
+        int k = 0;
+
+        while (i <= mid && j <= right) {
+            if (a[i] <= a[j]) {
+                temp[k++] = a[i++];
+            } else {
+                temp[k++] = a[j++];
+            }
+        }
+
+        while (i <= mid) {
+            temp[k++] = a[i++];
+        }
+
+        while (j <= right) {
+            temp[k++] = a[j++];
+        }
+
+        for (i = left; i <= right; i++) {
+            a[i] = temp[i - left];
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter array size:");
+        int n = sc.nextInt();
+
+        int a[] = new int[n];
+
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            a[i] = sc.nextInt();
+        }
+
+        mergesort(a, 0, n - 1);
+
+        System.out.println("Sorted array:");
+        for (int i = 0; i < n; i++) {
+            System.out.print(a[i] + " ");
+        }
+
+        sc.close();
+    }
+}
+
+5)
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int a[][] = new int[2][3];
+
+        System.out.println("Enter 6 elements:");
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                a[i][j] = sc.nextInt();
+            }
+        }
+
+        System.out.println("2D Array:");
+
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        sc.close();
+    }
+}
+
+        
+          
+
+            
+                
+                
+              
