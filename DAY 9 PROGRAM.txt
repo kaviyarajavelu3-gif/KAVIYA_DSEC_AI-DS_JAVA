@@ -1,0 +1,180 @@
+1)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.append(" Java");
+        sb.append(" Programming");
+
+        System.out.println(sb);
+    }
+}
+
+2)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.insert(1,"i");
+        
+
+        System.out.println(sb);
+    }
+}
+
+3)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Hello world");
+
+        sb.delete(5,11);
+        
+
+        System.out.println(sb);
+    }
+}
+
+
+4)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("java");
+
+        sb.reverse();
+        
+
+        System.out.println(sb);
+    }
+}
+
+5)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Hello");
+
+        sb.replace(0,2,"yo");
+        
+
+        System.out.println(sb);
+    }
+}
+
+
+6)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("java");
+
+        System.out.println(sb.charAt(2));
+    }
+}
+
+7)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("java");
+
+        sb.setCharAt(0, 'k');
+
+        System.out.println(sb);
+    }
+}
+
+8)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("java");
+
+    
+
+        System.out.println(sb.length());
+    }
+}
+
+9)
+public class Main {
+    public static void main(String[] args) {
+
+        StringBuilder sb = new StringBuilder("Helllo");
+        String s = sb.toString ();
+
+    
+        System.out.println(s);
+    }
+}
+
+10)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a sentence:");
+
+        String s = sc.nextLine();
+
+        StringBuilder sb = new StringBuilder(s);
+
+        for (int i = 0; i < sb.length(); i++) {
+
+            if (sb.charAt(i) == 'a') {
+                sb.setCharAt(i, 'A');
+            }
+        }
+
+        System.out.println(sb);
+
+        sc.close();
+    }
+}
+
+11)
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter a word:");
+
+        String s = sc.nextLine();
+
+        StringBuilder sb = new StringBuilder(s);
+        if (sb.length()>=2){
+          sb.deleteCharAt(sb.length() - 1);
+          sb.deleteCharAt(0);
+          System . out . println(sb);
+        }else {
+          System . out .println("atleast 3 characters");
+        } 
+    }
+}
+
+12)
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+        BufferedReader br = new BufferedReader(
+            new InputStreamReader(System.in)
+        );
+
+        System.out.println("Enter your name");
+
+        String name = br.readLine();
+
+        System.out.println("Welcome " + name);
+    }
+}
+        
+
